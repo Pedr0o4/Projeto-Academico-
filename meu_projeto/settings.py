@@ -103,9 +103,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
@@ -121,3 +121,10 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+DATE_INPUT_FORMATS = [
+    '%d/%m/%Y',  # Formato brasileiro: DD/MM/YYYY
+    '%d-%m-%Y',  # Outra forma com hífen
+    '%Y-%m-%d',  # Para aceitar o formato ISO: YYYY-MM-DD
+]
+FORMAT_MODULE_PATH = ['django.conf.locale.pt_BR'] 
